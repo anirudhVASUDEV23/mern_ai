@@ -11,13 +11,7 @@ dotenv.config();
 const app = express();
 
 // ✅ CORS setup
-app.use(
-  cors({
-    origin: ["http://localhost:5173"], // Add more domains if needed
-    methods: ["GET", "POST"],
-    credentials: true,
-  })
-);
+app.use(cors());
 
 app.use(express.json({ limit: "50mb" }));
 
